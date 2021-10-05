@@ -2,31 +2,53 @@ import Toast from './components/Toast.vue'
 
 const DToaster = {
     install: function (Vue, options) {
+        let shownToasts = []
+
         if (!options) {
             options = {}
         }
-        let shownToasts = []
 
-        function showToast(obj, type) {
-            const ToastrComponent = Vue.extend(Toast)
+        function showToast(props) {
+            return new Promise(function(resolve, reject) {
+                const ToastrComponent = Vue.extend(Toast)
+                var propsData = options
+                console.log("PROPS", props);
 
-            var propsData = Object.assign(options, obj, {
-                type: type
+                
+                if(options.presets != undefined && 
+                    options.presets.length > 0) {
+                        if(props.preset != undefined) {
+                            var idx = options.presets.findIndex(e => e.name == props.preset)
+                            if(idx != -1)
+                                propsData = Object.assign(propsData, options.presets[idx])
+                            else {
+                                reject({error: true, what: "Unknown preset"})
+                                return
+                            }
+                        }
+                }
+
+                propsData = Object.assign(propsData, props)
+                console.log("PROPSDATA", propsData);
+
+                var component = new ToastrComponent({
+                    el: document.createElement('div'),
+                    propsData,
+                })
+
+                component.$on("hidden", () => {
+                    console.log("HIDDEN!")
+                })
+
+                shownToasts.push(component)
+
+                resolve({error: false, what: "Success", reward: component})
             })
-
-            let component = new ToastrComponent({
-                el: document.createElement('div'),
-                propsData
-            })
-
-            shownToasts.push(component)
-
-            return component
 		}
 
         Vue.prototype.$dtoast = {
-          pop(obj) {
-                //
+          pop(props) {
+                return showToast(props)
           }
         }
     }
