@@ -1,6 +1,6 @@
 {
   "name": "dtoaster",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DToaster",
   "main": "./dist/dtoaster.common.js",
   "author": "Daniel Dimitrov @ddaniel987",
