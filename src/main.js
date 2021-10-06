@@ -12,7 +12,6 @@ const DToaster = {
             return new Promise(function(resolve, reject) {
                 const ToastrComponent = Vue.extend(Toast)
                 var propsData = options
-                console.log("PROPS", props);
 
                 
                 if(options.presets != undefined && 
@@ -29,7 +28,6 @@ const DToaster = {
                 }
 
                 propsData = Object.assign(propsData, props)
-                console.log("PROPSDATA", propsData);
 
                 var component = new ToastrComponent({
                     el: document.createElement('div'),

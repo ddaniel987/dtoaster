@@ -4,12 +4,11 @@
   "description": "DToaster",
   "main": "./dist/dtoaster.common.js",
   "author": "Daniel Dimitrov @ddaniel987",
-  "license": "MIT4",
+  "license": "MIT",
   "files": [
     "dist/*",
     "src/*"
   ],
-  "private": true,
   "scripts": {
     "lib": "vue-cli-service build --target lib --name dtoaster src/main.js",
     "serve": "vue-cli-service serve",
@@ -30,5 +29,22 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddaniel987/dtoaster.git"
+  },
+  "keywords": [
+    "vue2js",
+    "vue2",
+    "toast",
+    "notification",
+    "popup",
+    "vue",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/ddaniel987/dtoaster/issues"
+  },
+  "homepage": "https://github.com/ddaniel987/dtoaster#readme"
 }

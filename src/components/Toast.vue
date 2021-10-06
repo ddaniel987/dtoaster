@@ -158,7 +158,6 @@ export default {
             else
                 container.style.marginBottom = this.$props.containerVerticalOffset
             
-            console.log(this.$props.position.includes('left'))
             if(this.$props.position.includes('left'))
                 container.style.marginLeft = this.$props.containerSideOffset
             else
