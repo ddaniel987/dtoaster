@@ -2,7 +2,8 @@
 **- Basic and viable toasts with progressbar and high customizabillity**
 
 ## DEMO
-*soon*
+![Alt Text](https://s9.gifyu.com/images/ezgif-3-ced81cf05fd7.gif)
+![Alt Text](https://im3.ezgif.com/tmp/ezgif-3-7a6c986db88f.gif)
 
 ## Requisites
 VueJS >= 2.x
