@@ -1684,12 +1684,13 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"499a02a1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Toast.vue?vue&type=template&id=7157e6ad&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"dtoast-dub",style:(_vm.$props._style != null ? _vm.$props._style : _vm.adaptedStyle)},[_c('div',{staticClass:"dt-struct"},[_c('div',{staticClass:"dt-icon"},[_c('i',{class:_vm.$props.icon,style:({ color: _vm.$props.color})})]),_c('div',{staticClass:"dt-body"},[_c('span',{staticClass:"dt-body-heading"},[_vm._v(_vm._s(_vm.$props.heading))]),_c('span',{staticClass:"dt-body-content"},[_vm._v(_vm._s(_vm.$props.content))])]),_c('div',{staticClass:"dt-action"},[_vm._v(" x ")])]),_c('div',{staticClass:"dt-progress"})])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"499a02a1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Toast.vue?vue&type=template&id=7b868dd0&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":'dtoast-' + _vm.adaptedTransition,"appear":""},on:{"after-enter":_vm.afterTransitionEnter,"after-leave":_vm.afterTransitionLeave}},[(_vm.visible)?_c('div',{staticClass:"dtoast-dub",style:(_vm.$props._style != null ? _vm.$props._style : _vm.adaptedStyle)},[_c('div',{staticClass:"dt-struct"},[_c('div',{staticClass:"dt-icon"},[_c('i',{class:_vm.$props.icon,style:({ color: _vm.$props.color})})]),_c('div',{staticClass:"dt-body"},[_c('span',{staticClass:"dt-body-heading"},[_vm._v(_vm._s(_vm.$props.heading))]),_c('span',{staticClass:"dt-body-content"},[_vm._v(_vm._s(_vm.$props.content))])]),_c('div',{staticClass:"dt-action"},[_c('svg',{style:({fill: _vm.$props.color}),attrs:{"width":"15px","height":"15px","viewBox":"0 0 24 24"},on:{"click":_vm.hide}},[_c('g',{attrs:{"data-name":"Layer 2"}},[_c('g',{attrs:{"data-name":"close"}},[_c('rect',{attrs:{"width":"24","height":"24","transform":"rotate(180 12 12)","opacity":"0"}}),_c('path',{attrs:{"d":"M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"}})])])])])]),(_vm.show_progress_timeout)?_c('div',{staticClass:"dt-progress",style:({background: _vm.$props.progress_background})},[_c('div',{staticClass:"dt-thumb",style:({   background: _vm.$props.progress_thumb_bg,
+                       width: (_vm.$props.position.includes('left') ? (100 - (_vm.elapsed_ms / _vm.$props.duration * 100)) : (_vm.elapsed_ms / _vm.$props.duration * 100)) + '%'})})]):_vm._e()]):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Toast.vue?vue&type=template&id=7157e6ad&
+// CONCATENATED MODULE: ./src/components/Toast.vue?vue&type=template&id=7b868dd0&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
 var es_array_includes = __webpack_require__("caad");
@@ -1700,6 +1701,24 @@ var es_string_includes = __webpack_require__("2532");
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Toast.vue?vue&type=script&lang=js&
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1757,7 +1776,7 @@ var es_string_includes = __webpack_require__("2532");
     },
     height: {
       type: String,
-      default: '70px'
+      default: '75px'
     },
     name: {
       type: String
@@ -1771,15 +1790,29 @@ var es_string_includes = __webpack_require__("2532");
     icon: {
       type: String
     },
-    timeout: {
+    transition: {
+      type: String,
+      default: "slide"
+    },
+    duration: {
       type: String,
       default: "1000"
     },
     background: {
-      type: String
+      type: String,
+      default: "black"
+    },
+    progress_background: {
+      type: String,
+      default: "tomato"
+    },
+    progress_thumb_bg: {
+      type: String,
+      default: "red"
     },
     color: {
-      type: String
+      type: String,
+      default: "white"
     },
     _style: {
       type: Object,
@@ -1790,9 +1823,6 @@ var es_string_includes = __webpack_require__("2532");
       default: "true"
     }
   },
-  mounted: function mounted() {
-    console.log(this.$props._style);
-  },
   beforeMount: function beforeMount() {
     var container = document.querySelector(".dtoast-ctn.dtoast-".concat(this.position));
 
@@ -1800,17 +1830,19 @@ var es_string_includes = __webpack_require__("2532");
       container = document.createElement('div');
       container.classList.add('dtoast-ctn');
       container.classList.add("dtoast-".concat(this.position));
-      if (this.$props.position.includes('top')) container.style.marginTop = this.$props.containerOffset;else container.style.marginBottom = this.$props.containerOffset;
+      if (this.$props.position.includes('top')) container.style.marginTop = this.$props.containerVerticalOffset;else container.style.marginBottom = this.$props.containerVerticalOffset;
+      console.log(this.$props.position.includes('left'));
+      if (this.$props.position.includes('left')) container.style.marginLeft = this.$props.containerSideOffset;else container.style.marginRight = this.$props.containerSideOffset;
       document.body.appendChild(container);
     }
 
     container.appendChild(this.$el);
   },
   beforeDestroy: function beforeDestroy() {
-    this.$emit("hidden");
+    this.$el.remove();
   },
-  created: function created() {
-    console.log(this.$props);
+  mounted: function mounted() {
+    this.visible = true;
   },
   computed: {
     adaptedStyle: function adaptedStyle() {
@@ -1820,17 +1852,43 @@ var es_string_includes = __webpack_require__("2532");
         width: this.$props.width,
         'min-height': this.$props.height
       };
-      sObj[this.$props.position.includes('top') ? "margin-bottom" : "margin-top"] = this.$props.toastOffset;
+      sObj[this.$props.position.includes('top') ? "margin-bottom" : "margin-top"] = this.$props.toastVerticalOffset;
       return sObj;
+    },
+    adaptedTransition: function adaptedTransition() {
+      var trans = this.$props.transition;
+      if (this.$props.position.includes("left")) trans += '-left';else trans += '-right';
+      return trans;
     }
   },
   methods: {
+    afterTransitionEnter: function afterTransitionEnter() {
+      var _this = this;
+
+      var elapsed = setInterval(function () {
+        if (_this.elapsed_ms >= _this.$props.duration) {
+          clearInterval(elapsed);
+          return;
+        }
+
+        _this.elapsed_ms += 4.1;
+      }, 1);
+      setTimeout(function () {
+        _this.hide();
+      }, this.$props.duration);
+    },
+    afterTransitionLeave: function afterTransitionLeave() {
+      this.$emit("hidden");
+    },
     hide: function hide() {
-      this.$destroy();
+      this.visible = false;
     }
   },
   data: function data() {
-    return {};
+    return {
+      visible: false,
+      elapsed_ms: 0
+    };
   }
 });
 // CONCATENATED MODULE: ./src/components/Toast.vue?vue&type=script&lang=js&
@@ -1997,12 +2055,13 @@ const DToaster = {
                     el: document.createElement('div'),
                     propsData,
                 })
+                
 
                 component.$on("hidden", () => {
-                    console.log("HIDDEN!")
+                    component.$destroy();
                 })
 
-                shownToasts.push(component)
+                //shownToasts.push(component)
 
                 resolve({error: false, what: "Success", reward: component})
             })

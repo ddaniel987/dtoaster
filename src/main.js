@@ -35,12 +35,13 @@ const DToaster = {
                     el: document.createElement('div'),
                     propsData,
                 })
+                
 
                 component.$on("hidden", () => {
-                    console.log("HIDDEN!")
+                    component.$destroy();
                 })
 
-                shownToasts.push(component)
+                //shownToasts.push(component)
 
                 resolve({error: false, what: "Success", reward: component})
             })
