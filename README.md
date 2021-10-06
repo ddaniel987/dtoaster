@@ -2,9 +2,5 @@
 
 ## Project setup
 ```
-npm i
-```
-
-```
-npm run lib
+npm i && npm run lib
 ```
