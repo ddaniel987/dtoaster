@@ -146,6 +146,8 @@ export default {
             container.classList.add('dtoast-ctn')
             container.classList.add(`dtoast-${this.position}`)
 
+            container.style.overflow = 'hidden'
+
             if(this.$props.position.includes('top'))
                 container.style.marginTop = this.$props.containerVerticalOffset
             else
