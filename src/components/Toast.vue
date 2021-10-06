@@ -36,7 +36,7 @@
                 <div class="dt-thumb"
                     :style="
                     {   background: $props.progress_thumb_bg,
-                        width: ($props.position.includes('left') ? (100 - (elapsed_ms / $props.duration * 100)) : (elapsed_ms / $props.duration * 100)) + '%'}">
+                        width: (!$props.position.includes('left') ? (100 - (elapsed_ms / $props.duration * 100)) : (elapsed_ms / $props.duration * 100)) + '%'}">
                     </div>
             </div>
         </div>
@@ -152,6 +152,7 @@ export default {
             container.classList.add(`dtoast-${this.position}`)
 
             container.style.overflow = 'hidden'
+            container.style.zIndex = "9999999"
 
             if(this.$props.position.includes('top'))
                 container.style.marginTop = this.$props.containerVerticalOffset
