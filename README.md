@@ -111,7 +111,7 @@ This will create a toast with the options from your desired preset, which elimin
 | icon  | String | Toast's icon class | -- | -- |
 | icon_size  | String | Toast's icon font-size | 23px | -- |
 | transition  | String | Toast's transitioning | slide | slide, *more to come* |
-| duration  | String | Toast's duration | 1000 | -- |
+| duration  | String | Toast's duration | 1000 | milliseconds |
 | background  | String | Toast's background color | black | -- |
 | color  | String | Toast's font color | white | -- |
 | show_progress_timeout  | String | Show the progressbar | true | -- |
