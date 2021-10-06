@@ -11,7 +11,7 @@
 
                 <div class="dt-icon">
                     <i 
-                        :style="{ color: $props.color}"
+                        :style="{ color: $props.color, 'font-size': $props.icon_size}"
                         :class="$props.icon"></i>
                 
                 </div>
@@ -95,6 +95,11 @@ export default {
 
         icon: {
             type: String,
+        },
+
+        icon_size: {
+            type: String,
+            default: "23px",
         },
 
         transition: {
@@ -239,6 +244,10 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
+
+.dtoast-ctn {
+    overflow:hidden;
+}
 
 .dtoast-slide-right-leave-active,
 .dtoast-slide-right-enter-active {
