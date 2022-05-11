@@ -1,5 +1,8 @@
+## This project is currently suspended with NO active development on it. New and much better version of this is comming in the future and will be linked here after its release.
+
 ## DToaster 
 **- Basic and viable toasts with progressbar and high customizabillity**
+
 
 ## DEMO
 ![Alt Text](https://s9.gifyu.com/images/ezgif-3-ced81cf05fd7.gif)
