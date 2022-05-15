@@ -1,4 +1,4 @@
-## This project is currently suspended with NO active development on it. New and much better version of this is comming in the future and will be linked here after its release.
+## This project is currently abandoned with NO active development on it. New and much better version of this is comming in the future and will be linked here after its release.
 
 ## DToaster 
 **- Basic and viable toasts with progressbar and high customizabillity**
@@ -130,6 +130,7 @@ This will create a toast with the options from your desired preset, which elimin
 
 
 ## If you feel the need to thank me
-**BTC** - bc1q8zhwxa5l6zg3amxten5rmetdkrz4sp78qzl5c4
-
-**ETH** - 0x5e251964ACD0765694Bff190D88a6a727D986912
+BEP20 - 0x360d4a6d81eb5034d3917a155a0703851b1c5311
+BTC - 16sQhFgcY5wrL8cmLp5DSpxRL7hmUwtgEK
+DOGE - DKHa9DvqFBp9azDiAPwZdNqdhAgzyrkfG9
+ETH - 0x360d4a6d81eb5034d3917a155a0703851b1c5311
