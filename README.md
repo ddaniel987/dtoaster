@@ -130,7 +130,7 @@ This will create a toast with the options from your desired preset, which elimin
 
 
 ## If you feel the need to thank me
-BEP20 - 0x360d4a6d81eb5034d3917a155a0703851b1c5311
-BTC - 16sQhFgcY5wrL8cmLp5DSpxRL7hmUwtgEK
-DOGE - DKHa9DvqFBp9azDiAPwZdNqdhAgzyrkfG9
-ETH - 0x360d4a6d81eb5034d3917a155a0703851b1c5311
+BEP20 - 0x360d4a6d81eb5034d3917a155a0703851b1c5311<br>
+BTC - 16sQhFgcY5wrL8cmLp5DSpxRL7hmUwtgEK<br>
+DOGE - DKHa9DvqFBp9azDiAPwZdNqdhAgzyrkfG9<br>
+ETH - 0x360d4a6d81eb5034d3917a155a0703851b1c5311<br>
